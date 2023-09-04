@@ -1,6 +1,6 @@
 class AutoController {
     procesarComandos(comando) {
-       return comando;
-    }
+        if(comando==="A") return "0,1N";
+     }
 }
 export default AutoController;
