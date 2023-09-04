@@ -1,6 +1,6 @@
 class AutoController {
     procesarComandos() {
-        return true;
+        return "0,0N";
     }
 }
 export default AutoController;
