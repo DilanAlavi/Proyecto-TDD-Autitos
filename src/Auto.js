@@ -12,6 +12,13 @@ establecerDimensiones(dimensiones) {
     this.MX  = MX ;
     this.MY = MY;
   }
+  PosicionInicial(Inicio) {
+    const [x, y, direccion] = Inicio.match(/^(\d+),(\d+)([NSEW])$/).slice(1);
+    this.x = parseInt(x);
+    this.y = parseInt(y);
+    this.orientacion = direccion;
+}
+
   
     
 }

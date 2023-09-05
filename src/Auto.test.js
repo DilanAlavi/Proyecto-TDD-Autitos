@@ -26,3 +26,12 @@ import ControlAuto from "./Auto";
         expect(auto.MY).toEqual(5);
     });
 });
+describe("Prueba para establecer posición inicial", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.PosicionInicial('1,2N');
+        expect(auto.x).toEqual(1);
+        expect(auto.y).toEqual(2);
+        expect(auto.orientacion).toEqual('N');
+    });
+});
