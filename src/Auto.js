@@ -88,17 +88,26 @@ Comando(comandos) {
     this.PosicionInicial(partes[1]);
     for (let i = 0; i < partes[2].length; i++) {
         const comandoe = partes[2][i];
-        this.ComandosMover(comandoe);
+       
+        if (this.ValidarComando(comandoe)) {
+            this.ComandosMover(comandoe);;
+          }
       }
    
     return `${this.x},${this.y} ${this.orientacion}`;
 }
+ValidarComando(comando) {
+    const other = Object.assign(new ControlAuto(), this);
+    other.ComandosMover(comando);
 
-  
-
-
-  
-    
+    // Verifica si el comando mantiene al auto dentro de los límites
+    return (
+        other.x >= 0 &&
+        other.x <= this.MX &&
+        other.y >= 0 &&
+        other.y <= this.MY
+    );
+  }
 }
 
 

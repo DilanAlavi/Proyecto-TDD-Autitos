@@ -139,7 +139,7 @@ describe("Prueba para girar a la derecha desde el Sud", () => {
        expect(auto.orientacion).toEqual('W');
     });
 });
-test('Método Comando', () => {
+it('Método Comando', () => {
     const auto = new ControlAuto();
     const comandos = '5,5/1,2N/IAIAIAIAA';
     const resultado = auto.Comando(comandos);
@@ -156,3 +156,11 @@ test('Método Comando', () => {
     // Verificar que el resultado coincide con la posición y orientación esperadas
     expect(resultado).toEqual('1,3 N');
   });
+  it('Verificar ejecutar comando válido', () => {
+    const auto = new ControlAuto();
+    auto.Dimensiones('5,5');
+    auto.PosicionInicial('3,3N');
+    const comando = 'A';
+    expect(auto.ValidarComando(comando)).toBe(true);
+  });
+  
