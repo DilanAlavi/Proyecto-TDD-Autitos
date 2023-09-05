@@ -6,6 +6,13 @@ class ControlAuto {
         this.MY = 0;
         this.orientacion = '';
       }
+    girarIzquierda() {
+    switch (this.orientacion) {
+        case 'W':
+        this.orientacion = 'S';
+        break;
+        }
+      }
     // Implementación de la función establecerDimensiones
  Dimensiones(dimensiones) {
     const [MX , MY ] = dimensiones.split(',').map(Number);

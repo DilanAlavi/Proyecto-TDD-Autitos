@@ -75,3 +75,11 @@ describe("Prueba para avanzar hacia el Sud", () => {
         expect(auto.y).toEqual(1);
     });
 });
+describe("Prueba para girar a la izquierda desde el Oeste", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.PosicionInicial('1,1W');
+        auto.girarIzquierda();
+       expect(auto.orientacion).toEqual('S');
+    });
+});
