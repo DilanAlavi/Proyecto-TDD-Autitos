@@ -24,8 +24,11 @@ class ControlAuto {
      }
      girarDerecha() {
         switch (this.orientacion) {
-          case 'W':
+            case 'W':
             this.orientacion = 'N';
+            break;
+            case 'E':
+            this.orientacion = 'S';
             break;
         }
       }
