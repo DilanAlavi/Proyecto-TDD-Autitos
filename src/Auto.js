@@ -6,6 +6,38 @@ class ControlAuto {
         this.MY = 0;
         this.orientacion = '';
       }
+      // Implementación del método avanzar
+     avanzar() {
+    switch (this.orientacion) {
+       case 'W':
+        if (this.x > 0) this.x--;
+        break; 
+        case 'E':
+        if (this.x < this.MX) this.x++;
+        break; 
+        case 'N':
+        if (this.y < this.MY) this.y++;
+        break; 
+        case 'S':
+        if (this.y > 0) this.y--;
+        break;
+
+    }
+    
+  }
+      ComandosMover(comando) {
+        switch (comando) {
+          case 'I':
+            this.girarIzquierda();
+            break;
+          case 'D':
+            this.girarDerecha();
+            break;
+          case 'A':
+            this.avanzar();
+            break;
+        }
+      }
     girarIzquierda() {
     switch (this.orientacion) {
         case 'W':
@@ -50,26 +82,24 @@ class ControlAuto {
     this.y = parseInt(y);
     this.orientacion = direccion;
 }
-// Implementación del método avanzar
-avanzar() {
-    switch (this.orientacion) {
-       case 'W':
-        if (this.x > 0) this.x--;
-        break; 
-        case 'E':
-        if (this.x < this.MX) this.x++;
-        break; 
-        case 'N':
-        if (this.y < this.MY) this.y++;
-        break; 
-        case 'S':
-        if (this.y > 0) this.y--;
-        break;
+Comando(comandos) {
+    const partes = comandos.split('/');
+    this.Dimensiones(partes[0]);
+    this.PosicionInicial(partes[1]);
+    for (let i = 0; i < partes[2].length; i++) {
+        const comandoe = partes[2][i];
+        this.ComandosMover(comandoe);
+      }
+   
+    return `${this.x},${this.y} ${this.orientacion}`;
+}
 
-    }
-  }
+  
+
 
   
     
 }
+
+
 export default ControlAuto;
