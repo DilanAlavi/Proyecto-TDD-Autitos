@@ -11,7 +11,11 @@ class ControlAuto {
         case 'W':
         this.orientacion = 'S';
         break;
+        case 'E':
+            this.orientacion = 'N';
+            break;
         }
+        
       }
     // Implementación de la función establecerDimensiones
  Dimensiones(dimensiones) {
