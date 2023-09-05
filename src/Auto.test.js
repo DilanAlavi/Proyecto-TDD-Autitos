@@ -21,7 +21,7 @@ import ControlAuto from "./Auto";
   describe("Prueba para establecer dimensiones", () => {
     const auto = new ControlAuto();
      it("Establecer dimensiones", () => {
-        auto.establecerDimensiones('5,5');
+        auto.Dimensiones('5,5');
         expect(auto.MX).toEqual(5);
         expect(auto.MY).toEqual(5);
     });
@@ -33,5 +33,15 @@ describe("Prueba para establecer posición inicial", () => {
         expect(auto.x).toEqual(1);
         expect(auto.y).toEqual(2);
         expect(auto.orientacion).toEqual('N');
+    });
+});
+describe("Prueba para avanzar hacia el oeste", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.Dimensiones('5,5');
+        auto.PosicionInicial('2,2W');
+        auto.avanzar();
+        expect(auto.x).toEqual(1);
+        expect(auto.y).toEqual(2);
     });
 });

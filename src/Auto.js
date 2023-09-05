@@ -7,7 +7,7 @@ class ControlAuto {
         this.orientacion = '';
       }
     // Implementación de la función establecerDimensiones
-establecerDimensiones(dimensiones) {
+ Dimensiones(dimensiones) {
     const [MX , MY ] = dimensiones.split(',').map(Number);
     this.MX  = MX ;
     this.MY = MY;
@@ -18,6 +18,15 @@ establecerDimensiones(dimensiones) {
     this.y = parseInt(y);
     this.orientacion = direccion;
 }
+// Implementación del método avanzar
+avanzar() {
+    switch (this.orientacion) {
+       case 'W':
+        if (this.x > 0) this.x--;
+        break;   
+
+    }
+  }
 
   
     
