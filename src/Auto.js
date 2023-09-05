@@ -30,6 +30,9 @@ avanzar() {
         case 'N':
         if (this.y < this.MY) this.y++;
         break; 
+        case 'S':
+        if (this.y > 0) this.y--;
+        break;
 
     }
   }

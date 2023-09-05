@@ -65,3 +65,13 @@ describe("Prueba para avanzar hacia el Norte", () => {
         expect(auto.y).toEqual(3);
     });
 });
+describe("Prueba para avanzar hacia el Sud", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.Dimensiones('5,5');
+        auto.PosicionInicial('2,2S');
+        auto.avanzar();
+        expect(auto.x).toEqual(2);
+        expect(auto.y).toEqual(1);
+    });
+});
