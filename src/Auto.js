@@ -23,7 +23,10 @@ avanzar() {
     switch (this.orientacion) {
        case 'W':
         if (this.x > 0) this.x--;
-        break;   
+        break; 
+        case 'E':
+        if (this.x < this.MX) this.x++;
+        break;  
 
     }
   }
