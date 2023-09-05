@@ -91,3 +91,11 @@ describe("Prueba para girar a la izquierda desde el Este", () => {
        expect(auto.orientacion).toEqual('N');
     });
 });
+describe("Prueba para girar a la izquierda desde el Norte", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.PosicionInicial('1,1N');
+        auto.girarIzquierda();
+       expect(auto.orientacion).toEqual('W');
+    });
+});
