@@ -131,3 +131,11 @@ describe("Prueba para girar a la derecha desde el Norte", () => {
        expect(auto.orientacion).toEqual('E');
     });
 });
+describe("Prueba para girar a la derecha desde el Sud", () => {
+    const auto = new ControlAuto();
+     it("Establecer posición inicial", () => {
+        auto.PosicionInicial('1,1S');
+        auto.girarDerecha();
+       expect(auto.orientacion).toEqual('W');
+    });
+});
