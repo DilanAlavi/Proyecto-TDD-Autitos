@@ -17,6 +17,9 @@ class ControlAuto {
         case 'N':
         this.orientacion = 'W';
         break;
+        case 'S':
+        this.orientacion = 'E';
+        break;
         }
         
         
