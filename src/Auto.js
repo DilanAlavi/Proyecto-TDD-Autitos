@@ -26,7 +26,10 @@ avanzar() {
         break; 
         case 'E':
         if (this.x < this.MX) this.x++;
-        break;  
+        break; 
+        case 'N':
+        if (this.y < this.MY) this.y++;
+        break; 
 
     }
   }
