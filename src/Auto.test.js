@@ -163,4 +163,4 @@ it('Método Comando', () => {
     const comando = 'A';
     expect(auto.ValidarComando(comando)).toBe(true);
   });
-  
+
