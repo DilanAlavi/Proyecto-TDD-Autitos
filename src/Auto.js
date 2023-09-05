@@ -21,8 +21,13 @@ class ControlAuto {
         this.orientacion = 'E';
         break;
         }
-        
-        
+     }
+     girarDerecha() {
+        switch (this.orientacion) {
+          case 'W':
+            this.orientacion = 'N';
+            break;
+        }
       }
     // Implementación de la función establecerDimensiones
  Dimensiones(dimensiones) {
