@@ -30,6 +30,9 @@ class ControlAuto {
             case 'E':
             this.orientacion = 'S';
             break;
+            case 'N':
+            this.orientacion = 'E';
+             break;
         }
       }
     // Implementación de la función establecerDimensiones
